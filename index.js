@@ -1,0 +1,1 @@
+console.log(_.random(1, 2) )
