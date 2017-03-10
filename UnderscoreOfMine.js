@@ -37,6 +37,10 @@
     nativeBind         = FuncProto.bind,
     nativeCreate       = Object.create;
 
+  var Ctor = function(){};
+  
+  _.VERSION = '1.8.3';
+
   // 将上面定义的 `_` 局部变量赋值给全局对象中的 `_` 属性
   // 即客户端中 window._ = _
   // 这样暴露给全局后便可以在全局环境中使用 `_` 变量(方法)
