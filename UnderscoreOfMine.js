@@ -38,7 +38,7 @@
     nativeCreate       = Object.create;
 
   var Ctor = function(){};
-  
+
   _.VERSION = '1.8.3';
 
   // 将上面定义的 `_` 局部变量赋值给全局对象中的 `_` 属性
@@ -91,4 +91,21 @@
   _.isArrayLike = isArrayLike;
   // 返回一个函数，这个函数返回任何传入的对象的key属性值。
   _.property = property;
+
+
+  // 工具类方法
+  // 共 14 个扩展方法
+  // -----------------
+
+  // 如果全局环境中已经使用了 `_` 变量
+  // 可以用该方法返回其他变量
+  // 继续使用 underscore 中的方法
+  // var underscore = _.noConflict();
+  // underscore.each(..);
+  _.noConflict = function() {
+    root._ = previousUnderscore;
+    return this;
+
+  };
+
 }.call(this))
